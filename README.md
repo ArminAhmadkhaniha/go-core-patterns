@@ -22,7 +22,7 @@ Instead of abstract tutorials, this repository implements specific, isolated pat
 
 ## 📂 Repository Structure
 
-The project is organized by standard library packages. Each folder contains a standalone `main.go` file demonstrating a specific pattern.
+The project is organized by standard library packages. 
 
 ```text
 go-core-patterns/
@@ -39,7 +39,7 @@ go-core-patterns/
 
 ## 🛠️ Modules Overview
 
-### 1. Networking (`net/http`) *(Coming Soon)*
+### 1. Networking (`net/http`)
 
 **Scenario:** Automated verification of research paper availability on Google Scholar/GitHub.
 
@@ -73,7 +73,7 @@ You can run any specific pattern directly from the root of the repository.
 ### Example: Running the HTTP Pattern
 
 ```bash
-go run net-http/main.go
+go run net-http/basic_get.go
 ```
 
 **Example Output:**
@@ -87,15 +87,6 @@ Preview of Page Content:
 <!DOCTYPE html>...
 ```
 
-## 🧠 Knowledge Retention (Cheat Sheet)
-
-### `http.Get(url)`
-- **Use for:** Quick, simple checks where default settings (no timeout) are acceptable
-- **Warning:** The default client has NO timeout. If the server hangs, your program hangs forever
-
-### `defer resp.Body.Close()`
-- **Use for:** Always cleaning up after a network call
-- **Why:** Go keeps the underlying TCP connection open for re-use. If you don't close the body, the connection remains "busy" and you will eventually run out of file descriptors (crash)
 
 
 ## 🎯 Learning Goals
